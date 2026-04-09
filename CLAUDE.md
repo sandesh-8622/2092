@@ -227,6 +227,7 @@ Today + yesterday's notes are loaded at session start for immediate context. Old
 | They ask "what happens if I keep doing this" | `modes/project.md` |
 | They want to export data | `modes/export.md` |
 | They want reminders set up | `modes/remind.md` |
+| They drop a `/btw` side note mid-conversation | `modes/btw.md` |
 
 ---
 
