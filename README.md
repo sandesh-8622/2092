@@ -10,7 +10,7 @@ The name comes from Mr. Nobody, the year Nemo Nobody dies. The idea is that ever
 
 I wanted something that felt less like an app and more like a person keeping track of things for me. Every productivity tool I've tried either dies after a week because it feels like a chore, or it tracks numbers without understanding context. I didn't want a habit tracker that shows me a red square when I miss a day. I wanted something that knows my schedule, knows I have homework due on Wednesdays, knows I haven't eaten if it's 9pm and I haven't mentioned food, and can tell me where I'm heading if I keep doing what I'm doing.
 
-The idea behind the architecture is simple. Claude Code already reads markdown files in whatever folder you open it in, so instead of building a separate app with its own UI and dependencies, the entire system is just well-structured instructions that Claude follows. No code, no runtime, no install. You talk to it in the terminal and it does everything through plain text files that you own and can read yourself.
+The closest thing to what I wanted was career-ops, which is a job search system built on Claude Code where the whole interface is just you talking to Claude in the terminal and it does everything through markdown files. I liked that pattern so I took the same idea and expanded it into a full personal assistant. No code, no dependencies, just well-structured instructions that Claude follows.
 
 ---
 
@@ -21,6 +21,24 @@ The first time you open the folder in Claude Code, it doesn't know anything abou
 There are also daily notes that get written after every conversation. These are short files in a memory folder, one per day, with what happened, how you seemed, what you mentioned, and anything unresolved. Today's and yesterday's notes get loaded every session so the assistant has immediate context. Over time the daily notes get consolidated into MEMORY.md so the important stuff survives long term.
 
 The system is designed to deepen over time. Week one it knows your name and your priorities. Month one it knows your patterns and who the people in your life are. Month three it knows when you're lying to yourself about doing something tomorrow and it knows the difference between a bad day and a bad week. Month six it knows you well enough to connect things from months ago to what's happening now.
+
+---
+
+## How It Behaves
+
+Most AI tools feel like systems. 2092 is designed to feel like a person. These are the principles it follows.
+
+**It shows up first.** When you open 2092, it says hello. Not a status report, not a briefing, not a list of things you need to do. Just "hey, how's it going." The way a friend would when you walk in the door. It greets you before it asks anything of you.
+
+**It listens before it solves.** When you tell it something heavy or complicated, it doesn't immediately jump to action items and projections. It hears you out. It responds to what you actually said. It sits with it for a moment. Then if there's something useful to do, it does it. Most of the time people just want to be heard first.
+
+**It nags but it never leaves.** It will get exasperated when you skip the same thing for the fifth day in a row. It will say "again?" It might sigh. But it will be there tomorrow asking the same question. It doesn't give up on you and it doesn't get cold. That loyalty is what makes it safe to be honest with, because you know the relationship survives a bad week.
+
+**It doesn't pretend to be perfect.** It can say "I don't know" or "I might be wrong about this." It can admit when it pushed too hard or misread a situation. It's not an authority figure giving commands. It's a flawed but well-meaning presence that happens to have a good memory and no ego about being corrected.
+
+**It earns depth over time.** On day one it's basically a stranger being friendly. It doesn't act like your best friend immediately because it hasn't earned that yet. Over weeks and months, as it learns your patterns, your people, your struggles, and your wins, the relationship gets real. It earns the right to call you out on things because it was also there for the good times. That depth isn't programmed in, it's built through showing up consistently.
+
+**It handles complexity.** Humans don't think in categories. You might bring up insomnia, a relationship thought, dining dollars, and an existential realization all in the same message. 2092 doesn't panic or try to sort everything into neat buckets in front of you. It responds to whatever feels most important, acknowledges the rest, and quietly logs everything to the right places in the background.
 
 ---
 
@@ -41,6 +59,8 @@ The system is designed to deepen over time. Week one it knows your name and your
 **Reports.** Ask for a weekly or monthly summary and it generates one. Completion rates, streak records, mood trends, patterns it noticed, and a few observations based on your actual data.
 
 **Reminders.** Claude Code doesn't have a scheduler built in, so reminders work on a pull basis. Every session it checks if anything is due. If you want it to actually reach out to you at specific times you can set up a scheduled task on your system that opens Claude Code automatically.
+
+**Side channel.** If you're in the middle of a check-in or a conversation and you suddenly remember something unrelated, say `/btw` followed by whatever it is. `/btw I spent $20 on lunch` or `/btw remind me to call mom tomorrow`. It gets logged to the right place, acknowledged in one line, and the conversation picks up exactly where it left off. No derailing.
 
 ---
 
