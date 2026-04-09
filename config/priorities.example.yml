@@ -1,0 +1,7 @@
+priorities:
+  - id: 1
+    name: example
+    question: "did you do the thing?"
+    category: general
+    active: true
+    created: 2026-01-01

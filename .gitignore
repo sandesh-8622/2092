@@ -1,0 +1,15 @@
+MEMORY.md
+memory/
+config/profile.yml
+config/priorities.yml
+config/reminders.yml
+data/checkins.tsv
+data/schedule.md
+data/finances.md
+data/notes/
+data/attachments.md
+reports/*.md
+attachments/*
+!attachments/.gitkeep
+*.zip
+push-2092.ps1
